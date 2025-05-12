@@ -1,0 +1,48 @@
+.resultContainer {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.expenseItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.expenseItem:hover {
+  background-color: #f1f1f1;
+}
+
+.expenseItem button {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.expenseItem button:hover {
+  background-color: #c62828;
+}
+
+.total {
+  font-weight: bold;
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  color: #2e7d32;
+  text-align: right;
+}

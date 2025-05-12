@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import styles from "./App.module.css";
+import { Result } from "./pages/Result";
+import { Tracker } from "./pages/Tracker";
 
 function App() {
+  const [name, setName] = useState("");
+  const [amt, setAmt] = useState();
+  const [value, setValue] = useState(0);
+  const [expense, setExpense] = useState(
+    JSON.parse(localStorage.getItem("Expenses")) || []
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+      <Tracker
+        amt={amt}
+        expense={expense}
+        setExpense={setExpense}
+        setAmt={setAmt}
+        name={name}
+        setName={setName}
+        value={value}
+        setValue={setValue}
+      />
+      <Result
+        amt={amt}
+        expense={expense}
+        setExpense={setExpense}
+        setAmt={setAmt}
+        name={name}
+        setName={setName}
+        value={value}
+        setValue={setValue}
+      />
     </div>
   );
 }
